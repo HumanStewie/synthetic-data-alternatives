@@ -1,31 +1,3 @@
-import torch
-from torch.utils.data import Dataset
-
-
-class DatasetInterface(Dataset):
-    def __init__(self, labels):
-        self.labels = torch.tensor(labels, dtype=torch.long)
-
-    def __len__(self) -> int:
-        return len(self.labels)
-
-    def __getitem__(self, index: int):
-        raise Exception("Method should be implemented in subclass.")
-
-    def getInputSize(self):
-        raise Exception(
-            "Method should be implemented by subclasses where "
-            "models requires input size update (based on dataset)."
-        )
-
-    def zeroLabels(self) -> None:
-        """
-        Sets all labels to zero
-        """
-        self.labels = torch.zeros(len(self.labels), dtype=torch.long)
-
-    def setLabels(self, value: int) -> None:
-        """
-        Sets all labels to the given value
-        """
-        self.labels = torch.zeros(len(self.labels), dtype=torch.long) + value
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9557a03ffb6f85e2edba1e31f7f44a784e05a7da67752be85c10f0a3adebdfe
+size 898

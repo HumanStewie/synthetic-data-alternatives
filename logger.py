@@ -1,13 +1,3 @@
-import sys
-from datetime import datetime
-
-
-def logPrint(*msg):
-    """
-    Prints messages with time of occurrence down to the second
-    """
-    now = datetime.now()
-    time = str(now.strftime("%d/%m/%Y,%H:%M:%S"))
-    print(time + ":", end=" ")
-    print(*msg)
-    sys.stdout.flush()
+version https://git-lfs.github.com/spec/v1
+oid sha256:b35fd2ab515df48720291e6933a0908aea4acf035b54e7825b1b7ead595b0998
+size 287
